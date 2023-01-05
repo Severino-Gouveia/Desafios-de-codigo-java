@@ -5,17 +5,18 @@ import java.util.Scanner;
 public class DownloaddePacotes {
      
     public static void main(String[] args) {
-        Scanner Scan = new Scanner(System.in);
-        int tamanho = Scan.nextInt();
+        try (Scanner Scan = new Scanner(System.in)) {
+            int tamanho = Scan.nextInt();
 
-        StringBuffer progBuffer = new StringBuffer();
+            StringBuffer progBuffer = new StringBuffer();
 
-        if (Objects.nonNull(tamanho)){
-            for (int i =0 ; i < tamanho; i ++)
-    {
-            progBuffer.append("/");
+            if (Objects.nonNull(tamanho)){
+                for (int i =0 ; i < tamanho; i ++)
+   {
+                progBuffer.append("/");
+                }
+                System.out.println(progBuffer);
             }
-            System.out.println(progBuffer);
         }
     }   
 }
